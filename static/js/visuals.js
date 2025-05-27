@@ -27,7 +27,7 @@ export function drawImageWithDelay(context, image,i, j, in_bonus, speed) {
     }
 }
 export async function paintbg(context) {
-    loadImage(`./assets/images/background.webp`, function (image) {
+    loadImage(slimeImages.background, function (image) {
         context.drawImage(image,  0,  0, cellWidth * 5, cellHeight * 5);
         });
 }
@@ -40,11 +40,11 @@ export async function paint(context,matrix,speed,specialType) {
                 context.fillStyle = "brown";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
                 if (!specialType){
-                    loadImage(`./assets/images/slime_earthi.png`, function (image) {
+                    loadImage(slimeImages.earthi, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.3, (i - 1) * cellHeight + cellHeight * 1.3, cellWidth * 0.4, cellHeight * 0.4);
                     });
                 }else{
-                    loadImage(`./assets/images/slime_earthiii.png`, function (image) {
+                    loadImage(slimeImages.earthiii, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.1, (i - 1) * cellHeight + cellHeight * 1.1, cellWidth * 0.8, cellHeight * 0.8);
                     });
                 }
@@ -55,11 +55,11 @@ export async function paint(context,matrix,speed,specialType) {
                 context.fillStyle = "red";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
                 if (!specialType){
-                    loadImage(`./assets/images/slime_firei.png`, function (image) {
+                    loadImage(slimeImages.firei, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.2, (i - 1) * cellHeight + cellHeight * 1.2, cellWidth * 0.6, cellHeight * 0.6);
                 });
                 }else{
-                    loadImage(`./assets/images/slime_fireiii.png`, function (image) {
+                    loadImage(slimeImages.fireiii, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.05, (i - 1) * cellHeight + cellHeight * 1.05, cellWidth * 0.9, cellHeight * 0.9);
                 });
                 }
@@ -69,11 +69,11 @@ export async function paint(context,matrix,speed,specialType) {
                 context.fillStyle = "blue";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
                 if (!specialType){
-                    loadImage(`./assets/images/slime_icei.png`, function (image) {
+                    loadImage(slimeImages.icei, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.21, (i - 1) * cellHeight + cellHeight * 1.21, cellWidth * 0.58, cellHeight * 0.58);
                 });
                 }else{
-                    loadImage(`./assets/images/slime_iceiii.png`, function (image) {
+                    loadImage(slimeImages.iceiii, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.05, (i - 1) * cellHeight + cellHeight * 1.05, cellWidth * 0.9, cellHeight * 0.9);
                 });
                 }
@@ -83,11 +83,11 @@ export async function paint(context,matrix,speed,specialType) {
                 context.fillStyle = "yellow";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
                 if (!specialType){
-                loadImage(`./assets/images/slime_thunderi.png`, function (image) {
+                loadImage(slimeImages.thunderi, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.22, (i - 1) * cellHeight + cellHeight * 1.22, cellWidth * 0.56, cellHeight * 0.56);
                 });
                 }else{
-                loadImage(`./assets/images/slime_thunderiii.png`, function (image) {
+                loadImage(slimeImages.thunderiii, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.05, (i - 1) * cellHeight + cellHeight * 1.05, cellWidth * 0.9, cellHeight * 0.9);
                 });
                 }
@@ -96,11 +96,11 @@ export async function paint(context,matrix,speed,specialType) {
                 context.fillStyle = "#354f35";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
                 if (!specialType){
-                    loadImage(`./assets/images/Slime Windi.png`, function (image) {
+                    loadImage(slimeImages.windi, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.21, (i - 1) * cellHeight + cellHeight * 1.21, cellWidth * 0.58, cellHeight * 0.58);
                 });
                 }else{
-                    loadImage(`./assets/images/Slime Windiii.png`, function (image) {
+                    loadImage(slimeImages.windiii, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.05, (i - 1) * cellHeight + cellHeight * 1.05, cellWidth * 0.9, cellHeight * 0.9);
                 });
                 }
@@ -109,14 +109,14 @@ export async function paint(context,matrix,speed,specialType) {
                 matrix[i][j] = 6;
                 context.fillStyle = "#c2b79b";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
-                loadImage(`./assets/images/slime_holyii.png`, function (image) {
+                loadImage(slimeImages.holyii, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth+ cellWidth * 1.2, (i - 1) * cellHeight + cellHeight * 1.2, cellWidth * 0.6, cellHeight * 0.6);
                 });
             } else if (9621 <= matrix[i][j] && matrix[i][j] <= 9700) {
                 matrix[i][j] = 7;
                 context.fillStyle = "#c2b79b";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
-                loadImage(`./assets/images/slime_holyiii.png`, function (image) {
+                loadImage(slimeImages.holyiii, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.1, (i - 1) * cellHeight + cellHeight * 1.1, cellWidth * 0.8, cellHeight * 0.8);
                 });
             }else if (9701 <= matrix[i][j] && matrix[i][j] <= 9870){
@@ -126,7 +126,7 @@ export async function paint(context,matrix,speed,specialType) {
                 else{matrix[i][j]=11;}             
                 context.fillStyle = "#321e34";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
-                loadImage(`./assets/images/DarknessSlime.png`, function (image) {
+                loadImage(slimeImages.darkness, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.15, (i - 1) * cellHeight + cellHeight * 1.15, cellWidth * 0.7, cellHeight * 0.7);
                 });
 
@@ -134,7 +134,7 @@ export async function paint(context,matrix,speed,specialType) {
                 matrix[i][j] = -1;
                 context.fillStyle = "#87CEEB";
                 context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
-                loadImage(`./assets/images/slimebono.png`, function (image) {
+                loadImage(slimeImages.bonus, function (image) {
                     context.drawImage(image, (j - 1) * cellWidth + cellWidth * 1.15, (i - 1) * cellHeight + cellHeight * 1.15, cellWidth * 0.7, cellHeight * 0.7);
                 });
             }  

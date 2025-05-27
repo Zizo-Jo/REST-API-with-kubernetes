@@ -29,10 +29,32 @@
                 <div id="improve">+</div>
             </div>
             
-            
+        <script>
+            const slimeImages = {
+                earthi: "{{ url_for('static', filename='assets/images/slime_earthi.png') }}",
+                earthiii: "{{ url_for('static', filename='assets/images/slime_earthiii.png') }}",
+                firei: "{{ url_for('static', filename='assets/images/slime_firei.png') }}",
+                fireiii: "{{ url_for('static', filename='assets/images/slime_fireiii.png') }}",
+                icei: "{{ url_for('static', filename='assets/images/slime_icei.png') }}",
+                iceiii: "{{ url_for('static', filename='assets/images/slime_iceiii.png') }}",
+                thunderi: "{{ url_for('static', filename='assets/images/slime_thunderi.png') }}",
+                thunderiii: "{{ url_for('static', filename='assets/images/slime_thunderiii.png') }}",
+                windi: "{{ url_for('static', filename='assets/images/Slime Windi.png') }}",
+                windiii: "{{ url_for('static', filename='assets/images/Slime Windiii.png') }}",
+                holyii: "{{ url_for('static', filename='assets/images/slime_holyii.png') }}",
+                holyiii: "{{ url_for('static', filename='assets/images/slime_holyiii.png') }}",
+                darkness: "{{ url_for('static', filename='assets/images/DarknessSlime.png') }}",
+                bonus: "{{ url_for('static', filename='assets/images/slimebono.png') }}",
+                background: "{{ url_for('static', filename='assets/images/background.webp') }}",
+                buffer: "{{ url_for('static', filename='assets/images/Slime RPG Buffer.png') }}",
+                defender: "{{ url_for('static', filename='assets/images/Slime RPG Defender.png') }}",
+                healer: "{{ url_for('static', filename='assets/images/Slime RPG Healer.png') }}",
+                attacker: "{{ url_for('static', filename='assets/images/Slime RPG Attacker.png') }}"
+            };
+        </script>
         <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
-        <script type="module" src="{{ url_for('static', filename='js/js/visuals.js') }}"></script>
-        <script type="module" src="{{ url_for('static', filename='js/js/bonusvisuals.js') }}"></script>
-        <script type="module" src="{{ url_for('static', filename='js/js/gameLogic.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='js/visuals.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='js/bonusvisuals.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='js/gameLogic.js') }}"></script>
     </body>
 </html>

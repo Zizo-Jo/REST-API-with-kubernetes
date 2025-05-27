@@ -28,8 +28,8 @@ const cellWidthBon = cellWidth*1.125
 
 const fondoAudio = document.getElementById("fondoAudio");
 const soScroll = document.getElementById("sonidoScroll");
+let flag = true;
 
-fondoAudio.play()
 updateCanvasSize(canvas);
 paintbg(context)
 let matrix = Array.from({ length: 5 }, () => Array.from({ length: 5 }, () => Math.floor(Math.random() * 10000) + 1));
@@ -62,6 +62,10 @@ improve.addEventListener("click",function(){
 })
 
 btn.addEventListener("click", async function() {
+  if (flag){
+    fondoAudio.play();
+    flag = false;
+  }
   if (!playing && !in_bonus){
       for (let count=0;count<tiradas;count++){
         bonusscore.innerHTML="";

@@ -5,7 +5,7 @@ export async function check_bon(context, m,money, varianca, speed, monret, in_bo
     for (let i=0;i<m.length;i++){
         for (let j=0;j<m[0].length;j++){
         if (i<m.length && m[i][j]>=8){
-            const image = await loadImageAsync(`./assets/images/DarknessSlime.png`);
+            const image = await loadImageAsync(slimeImages.darkness);
             let a=i;
             while (a<m.length){
             if (m[a][j]<8 && m[a][j]!=-1){
@@ -158,7 +158,7 @@ export async function check(context,m,countbono,money, specialType, varianca,spe
     for (let i=0;i<m.length;i++){
         for (let j=0;j<m[0].length;j++){
         if (i<m.length && m[i][j]==7){
-            const image = await loadImageAsync(`./assets/images/slime_holyiii.png`);
+            const image = await loadImageAsync(slimeImages.holyiii);
             let a=i;
             while (a<m.length){
             if (m[a][j]<8 && m[a][j]!=-1){
