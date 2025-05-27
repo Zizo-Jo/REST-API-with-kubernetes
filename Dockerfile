@@ -1,7 +1,11 @@
 FROM python:3.7-slim
 
 WORKDIR /app
+
 COPY app.py /app/
+COPY templates/ /app/templates/
+COPY static/ /app/static/
+
 RUN pip3 install flask
 RUN mkdir /app/logs
 

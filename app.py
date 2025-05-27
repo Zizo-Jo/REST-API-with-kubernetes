@@ -1,19 +1,11 @@
-from flask import Flask, jsonify
+from flask import Flask, render_template
 import os
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-	return "HELLO Zihao, I'm god"
+    return render_template("index.html")
 
-@app.route("/system")
-def system():
-	name = 'Docker'
-	mail = 'my_email@gmail.com'
-	return jsonify(
-		system=name,
-		email=mail
-		)
 if __name__ == '__main__':
-	app.run(debug=False, host="0.0.0.0", port=5200)
+    app.run(debug=True, host="0.0.0.0", port=5200)
