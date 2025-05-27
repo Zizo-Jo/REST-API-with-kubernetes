@@ -7,7 +7,7 @@ app = Flask(__name__)
 def hello():
 	return "HELLO Zihao, I'm god"
 
-@app.route("system")
+@app.route("/system")
 def system():
 	name = 'Docker'
 	mail = 'my_email@gmail.com'
