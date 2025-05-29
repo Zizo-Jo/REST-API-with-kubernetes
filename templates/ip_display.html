@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pod Information</title>
+    <script>
+        // Show IP for 1 second then redirect to main page
+        setTimeout(function() {
+            window.location.href = "{{ url_for('main') }}";
+        }, 10000);
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .ip-container {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .ip-address {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1a73e8;
+            margin: 1rem 0;
+        }
+        .loading {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="ip-container">
+        <h2>Running on Pod:</h2>
+        <div class="ip-address">{{ pod_ip }}</div>
+        <div class="loading">Redirecting to main page in 10 second...</div>
+    </div>
+</body>
+</html>

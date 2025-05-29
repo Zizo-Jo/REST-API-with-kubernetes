@@ -35,11 +35,6 @@ spec:
             configMapKeyRef:
               name: mongodb-configmap
               key: database_url
-        - name: ME_CONFIG_MONGODB_SERVER
-          valueFrom:
-            configMapKeyRef:
-              name: mongodb-configmap
-              key: database_url
 ---
 apiVersion: v1
 kind: Service
