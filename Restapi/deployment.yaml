@@ -13,7 +13,6 @@ spec:
         app: restapi
     spec:
       containers:
-      - name: restapi
-        image: restapi-modified:latest
-        ports:
-        - containerPort: 5200
+      - name: restapi-container
+        image: restapi:latest 
+        imagePullPolicy: Never  # Critical for local images no need to pull from dockerhub
