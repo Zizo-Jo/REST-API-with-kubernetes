@@ -1,4 +1,3 @@
-# Final-Project-of-NA
 # Final Project: Deploying a Flask REST API with Kubernetes
 
 This project demonstrates how to deploy, scale, and manage a containerized Flask REST API using Minikube and Kubernetes. It also covers adding a MongoDB database to the cluster.
